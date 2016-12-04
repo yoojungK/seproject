@@ -13,11 +13,14 @@ request.setCharacterEncoding("utf-8");
 Connection conn = null;
 PreparedStatement pstmt = null;
 ResultSet rs = null;
+
 String url = "서버주소"; 
 String dbuser = "유저네임"; 
 String dbpass = "비번";
+
 String id = request.getParameter("userid");
 String pw = request.getParameter("userpw");
+
 try{
 	Class.forName("com.mysql.jdbc.Driver");
     conn=DriverManager.getConnection(url,dbuser,dbpass);
